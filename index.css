@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    width: 100%;
+    min-height: 80px;
+    background-color: #000000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .header {
+    display: flex;
+    align-items: center;
+}
+
+header .imlogo {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 25px;
+}
+
+header .plogo {
+    margin-left: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header .menu li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+header .menu li a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #FFF;
+    text-transform: uppercase;
+    padding: 10px 25px;
+    border-radius: 15px;
+    transition: all linear 190ms;
+}
+
+header .menu li a:hover {
+    background-color: rgba(28, 177, 8, 0.4);
+}
+
+.pagina {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url(../Katze.net/bgLogin.jpg);
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center, center;
+}
+
+.centro {
+    width: 50%;
+    max-width: 450px;
+    background: white;
+    padding: 34px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 7px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo {
+    padding: 15px;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    transition: all linear 190ms;
+    font-size: 0.9em;
+    color: #444;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+.campo::placeholder {
+    color: #ccc;
+}
+
+.campo:focus {
+    border-color: #48bf53;
+}
+
+.btn {
+    padding: 15px;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    margin-top: 20px;
+    border-radius: 7px;
+    background-color: #30d340;
+    cursor: pointer;
+    transition: all linear 190ms;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #379941;
+}
+
+form p {
+    font-size: 1.0em;
+    color: #666;
+}
+
+form a {
+    font-size: 0.9em;
+    color: #65b40b;
+    text-decoration: none;
+}
+
+form h2 {
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+footer {
+    width: 100%;
+    min-height: 170px;
+    background: #444;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .boxs {
+    width: 320px;
+    min-height: 150px;
+    padding: 20px;
+}
+
+footer .boxs:nth-child(4) {
+    width: 400px;
+}
+
+.boxs h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.boxs ul li {
+    margin: 10px 0px;
+    list-style: none;
+}
+
+.boxs ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.boxs ul li a:hover {
+    color: #fff;
+}
+
+.boxs p {
+    color: #fff;
+    text-align: justify;
+}
+
+.footer {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 0px 20px;
+}
+
+.footer h2 {
+    color: #fff;
+}
+
+.footer .sociais {
+    display: flex;
+}
+
+.sociais .social {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: #ddd;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .3s linear;
+}
+
+.sociais .social a {
+    color: #000;
+    font-size: 1.5em;
+    transition: color .3s linear;
+}
+
+.sociais .social:hover {
+    background-color: #444;
+}
+
+.sociais .social:hover a {
+    color: #fff;
+}
+@media(max-width: 950px) {
+    footer {
+        flex-direction: column;
+    }
+    footer .boxs {
+        width: 100%;
+        text-align: center;
+    }
+    footer .boxs:nth-child(4) {
+        width: 100%;
+    }
+}
