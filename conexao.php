@@ -1,14 +1,14 @@
 <?php
 
+$hostname = 'localhost';
+$bancodedados = 'katze.net';
 $usuario = 'root';
 $senha = '';
-$database = 'login';
-$host = 'localhost';
 
-$mysqli = new mysqli($host, $usuario, $senha, $database);
+$mysqli = new mysqli($hostname, $usuario, $senha, $bancodedados);
 
-if($mysqli ->error) {
-    die("Falha ao conectar ao banco de dados: " . $mysqli->error);
+if($mysqli ->connect_errno) {
+    echo "Falha ao conectar: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 }
 
 ?>

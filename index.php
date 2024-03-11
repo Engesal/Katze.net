@@ -5,10 +5,10 @@ include('conexao.php');
 if(isset($_POST['email']) || isset($_POST['senha'])) {
 
     if(strlen($_POST['email']) == 0) {
-        echo "Preencha seu e-mail";
+        echo '<script>alert("Preencha seu e-mail")</script>';
 
     } else if (strlen($_POST['senha']) == 0) {
-        echo "Preencha sua senha";
+        echo '<script>alert("Preencha sua senha")</script>';
 }   else {
     
     $email = $mysqli->real_escape_string($_POST['email']);
@@ -21,23 +21,23 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
     if($quantidade == 1) {
 
-        $usuario = $sql_query ->fetch_assoc();
+        $usuario = $sql_query->fetch_assoc();
 
-        if(isset($_SESSION)) {
+        if(!isset($_SESSION)) {
             session_start();
         }
-        $_SSESION['id'] = $usuario['id'];
+        $_SESSION['id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
         
-        header("Location: painel.php");
+        header("Location: principal.php");
         
     } else {
-        echo "Falha ao logar ! E-mail ou senha incorretos";
+        echo '<script>alert("Falha ao logar ! E-mail ou senha incorretos")</script';
     }
 }
 }
-?>
 
+?>
 
 
 <!DOCTYPE html>
@@ -64,18 +64,18 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             <ul>
                 <li><a href="#">Sobre</a></li>
                 <li><a href="#">Serviços</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#">Software</a></li>
             </ul>
         </div>
 
     </header>
     <div class="pagina">
         <div class="centro">
-            <form>
+            <form method="POST" action="">
                 <h2>Login</h2>
                 <p>Digite seus dados.</p>
-                <input class="campo" type="email" placeholder="Digite seu Email.">
-                <input class="campo" type="password" placeholder="Digite sua Senha.">
+                <input class="campo" type="text" name="email" placeholder="Digite seu Email.">
+                <input class="campo" type="password" name="senha" placeholder="Digite sua Senha.">
                 <a href="#">Esqueci minha Senha</a>
                 <input class="btn" type="submit" value="Acessar">
                 <p>Ainda não possui conta <a href="#">Crie uma agora.</a></p>
@@ -90,8 +90,8 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             <h2>Inicio</h2>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Download</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Software</a></li>
             </ul>
         </div>
         <div class="boxs">
