@@ -29,7 +29,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         $_SESSION['id'] = $usuario['id'];
         $_SESSION['nome'] = $usuario['nome'];
         
-        header("Location: principal.php");
+        header("Location: pgprincipal.php");
         
     } else {
         echo '<script>alert("Falha ao logar ! E-mail ou senha incorretos")</script';
@@ -78,7 +78,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                 <input class="campo" type="password" name="senha" placeholder="Digite sua Senha.">
                 <a href="#">Esqueci minha Senha</a>
                 <input class="btn" type="submit" value="Acessar">
-                <p>Ainda não possui conta <a href="#">Crie uma agora.</a></p>
+                <p>Ainda não possui conta <a href="cada.php">Crie uma agora.</a></p>
             </form>
 
         </div>
